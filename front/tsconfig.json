@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".", // Define la base del proyecto
+    "paths": {
+      "types/*": [
+        "./@types/*"
+      ],
+      "@/*": ["src/*"] // Alias '@' para la carpeta 'src'
+    },
+    "types": ["node"] // Incluye los tipos de Node.js
+  }
+}
