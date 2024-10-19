@@ -6,8 +6,8 @@ import moveFeatures from '@/map/mapLibre/mapbox/mapboxGlLocalFiles/move_features
 
 import * as turf from "@turf/turf"
 
-import rotate from '../../image/rotate.png';
-import scale from '../../image/scale.png';
+import rotate from '/rotate.png';
+import scale from '/scale.png';
 import { toast } from 'sonner';
 
 export const SRMode: any = {}; //scale rotate mode
