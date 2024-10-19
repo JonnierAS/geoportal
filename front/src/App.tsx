@@ -1,3 +1,4 @@
+import "leaflet/dist/leaflet.css";
 import './index.css'
 
 import RouteIndex from "./routes"

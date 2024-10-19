@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+/* barra de herramientas leaflet */
+.leaflet-container{
+    z-index: 50;
+}
+  /* para ocultar el logo de leaflet */
+.leaflet-container .leaflet-control-attribution {
+    visibility: hidden;
+}
+
+.leaflet-control-layers.leaflet-control,
+.leaflet-control-layers-toggle{
+    top: 50px !important;
+    right: 10px !important;
+}
+  

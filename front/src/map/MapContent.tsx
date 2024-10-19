@@ -1,5 +1,6 @@
 import MapLibre from '@/map/mapLibre/MapLibre'
 import { useParams } from 'react-router-dom'
+import { MapLeaflet } from './mapLeaflet/MapLeaflet'
 
 export default function MapContent() {
   const {id} = useParams()
@@ -8,7 +9,7 @@ export default function MapContent() {
       {id == 'maplibre' ? (
         <MapLibre />
       ):(
-        null
+        <MapLeaflet />
       )}
     </div>
   )
