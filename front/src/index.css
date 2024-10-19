@@ -2,8 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    font-family: Poppins, sans-serif;
+}
+  
+html, body {
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000000;
+}
 
+/* barra de herramientas leaflet For Destokp */
+.leaflet-bottom.leaflet-left{
+  bottom: 80px !important
+}
 
+  /*barra de herramientas leaflet For Mobile Portrait View */
+@media screen
+and (max-device-width: 480px)
+and (orientation: portrait){
+    .leaflet-bottom.leaflet-left{
+        bottom: 130px !important
+    }
+}
 
 /* barra de herramientas leaflet */
 .leaflet-container{
@@ -14,9 +38,71 @@
     visibility: hidden;
 }
 
-.leaflet-control-layers.leaflet-control,
-.leaflet-control-layers-toggle{
-    top: 50px !important;
-    right: 10px !important;
-}
+.tooltip {
+    @apply relative inline-block;
+  }
   
+  .tooltip .tooltiptext {
+    @apply invisible min-w-32 bg-gray-800 text-white text-center rounded p-1 absolute z-[1000] items-center  left-10 top-10 -ml-12 opacity-0 transition-opacity duration-300;
+  }
+  
+  
+  .tooltip:hover .tooltiptext {
+    @apply visible opacity-100;
+  }
+  
+  .tooltip:hover .tooltiptextsecond {
+    @apply visible opacity-100;
+  }
+  
+  .tooltip .tooltiptextsecond {
+    @apply invisible w-32 bg-gray-800 text-white text-center rounded p-1 absolute z-[1000] bottom-0 right-12 -ml-12 opacity-0 transition-opacity duration-300;
+  }
+
+  .tooltip:active .tooltiptextup {
+    @apply visible opacity-100;
+  }
+
+  .tooltip:disabled .tooltiptextup {
+    @apply invisible w-[90px] bg-white text-black text-center rounded py-0.5 px-1 absolute z-[1100] top-[-25px] -ml-14 opacity-0 transition-opacity duration-300;
+  }
+
+  .tooltip:active .popover {
+    @apply visible opacity-100;
+  }
+
+  .tooltip:disabled .popover {
+    @apply invisible w-[90px] bg-white text-black text-center rounded py-0.5 px-1 absolute z-[1100] top-[-25px] -ml-14 opacity-0 transition-opacity duration-300;
+  }
+
+  .tooltip:hover .tooltiptextupHover {
+    @apply visible opacity-100;
+  }
+
+  .tooltip .tooltiptextupHover {
+    @apply invisible w-[90px] bg-gray-800 text-white text-center rounded py-0.5 px-1 absolute z-[1100] top-[-25px] -ml-14 opacity-0 transition-opacity duration-300;
+  }
+  
+  .tooltip .tooltiptextupHover::after {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-left: 5px; /* Mitad del tamaño del triángulo */
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent #222 transparent; /* Modifica el color según lo desees */
+    transform: rotate(175deg);
+  }
+  
+  .tooltip .tooltiptextup::after {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: 40%;
+    margin-left: 5px; /* Mitad del tamaño del triángulo */
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent #807c7c transparent; /* Modifica el color según lo desees */
+    transform: rotate(0deg);
+  }
