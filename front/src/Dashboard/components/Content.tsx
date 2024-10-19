@@ -9,7 +9,7 @@ const listOfMaps = [
 
 export default function Content() {
   return (
-    <div className='mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 xl:h-[390px] h-[320px] p-2 max-w-4xl '>
+    <div className='mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 xl:h-[390px] h-[320px] p-2 max-w-4xl  translate-y-[20%]'>
         {listOfMaps.map((map, index) => (
             <Link key={index} to={`/map/${map.id}`} 
                 className='border border-gray-400 rounded px-4 py-2 h-[190px] w-full font-semibold text-gray-600'
