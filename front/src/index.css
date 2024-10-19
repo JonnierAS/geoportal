@@ -15,16 +15,25 @@ html, body {
     color: #000000;
 }
 
-/* barra de herramientas leaflet For Destokp */
-.leaflet-bottom.leaflet-left{
+
+/* barra de herramientas For Destokp */
+.leaflet-bottom.leaflet-lef,
+.maplibregl-ctrl-bottom-left{
   bottom: 80px !important
 }
+
+.maplibregl-ctrl-top-left{
+  left: 10px !important;
+  top: 20% !important
+} 
+
 
   /*barra de herramientas leaflet For Mobile Portrait View */
 @media screen
 and (max-device-width: 480px)
 and (orientation: portrait){
-    .leaflet-bottom.leaflet-left{
+    .leaflet-bottom.leaflet-left,
+    .maplibregl-ctrl-bottom-left{
         bottom: 130px !important
     }
 }
