@@ -17,7 +17,7 @@ html, body {
 
 
 /* barra de herramientas For Destokp */
-.leaflet-bottom.leaflet-lef,
+.leaflet-bottom, .leaflet-lef,
 .maplibregl-ctrl-bottom-left{
   bottom: 80px !important
 }
@@ -115,3 +115,11 @@ and (orientation: portrait){
     border-color: transparent transparent #807c7c transparent; /* Modifica el color según lo desees */
     transform: rotate(0deg);
   }
+
+  /*right sidePanel */
+.sidepanel-content{
+  right: inherit;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

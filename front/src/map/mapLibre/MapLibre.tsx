@@ -5,6 +5,7 @@ import mapLibregl from 'maplibre-gl';
 import {setMapref} from '@/redux/features/mapFeatures'
 import { useDispatch } from 'react-redux';
 import DrawControl from '@/map/mapLibre/mapbox/MapboxDraw';
+import { SidePanel } from '@/map/layout/SidePanel';
 
 const INITIAL_POSITION = {
   latitude: -12.020545729298373,
@@ -25,6 +26,10 @@ export default function MapLibre() {
 
   return (
     <>
+
+      <SidePanel side={'right'} Component={"ContentLayout"} isResizable={false} />
+      <SidePanel side={'left'} Component={"ContentLayoutLayers"} isResizable={false} />
+
       <Map
         ref={mapRef}
         // onClick={handleclickSelect}  
