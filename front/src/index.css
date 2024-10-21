@@ -17,9 +17,10 @@ html, body {
 
 
 /* barra de herramientas For Destokp */
-.leaflet-bottom, .leaflet-lef,
+.leaflet-bottom,
 .maplibregl-ctrl-bottom-left{
-  bottom: 80px !important
+  bottom: 80px !important;
+  left: 12px;
 }
 
 .maplibregl-ctrl-top-left{
