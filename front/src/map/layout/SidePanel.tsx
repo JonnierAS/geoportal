@@ -58,7 +58,7 @@ export function SidePanel({ side, Component, isResizable=false }: {side: string,
           className={"sidepanel-content absolute bg-white pt-14 z-[950]"}
           style={panelStyles}
         >
-            <Component />
+            {/* <Component /> */}
         </div>
           {isResizable && <button
           type="button"
